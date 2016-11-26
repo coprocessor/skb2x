@@ -7,9 +7,9 @@ const openPort = 3000;
 
 appExpress.use(cors());
 appExpress.get("/task2x",(req, res)=>{
-	const shadowNumber = +(req.query.i);
-	if (shadowNumber < 0 || shadowNumber > 18) res.send("integer of range");
-	res.send(arrayNumbers[shadowNumber].toString());
+  const shadowNumber = +(req.query.i);
+  if (shadowNumber < 0 || shadowNumber > 18) res.send("integer of range");
+  res.send(arrayNumbers[shadowNumber].toString());
 });
 
 appExpress.listen(openPort, () => {
